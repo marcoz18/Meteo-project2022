@@ -1,3 +1,7 @@
+.navbar{
+  justify-content: space-between;
+}
+/*CAROUSEL*/
 .carousel-item{
     height:32rem;
     background:#000;
@@ -24,6 +28,8 @@
     bottom: 3rem;
     z-index: 10;
   }
+
+/*CARDS*/
 
 .marketing {
     padding: 80px 0;
@@ -68,3 +74,15 @@
       margin-top: 7rem;
     }
   }
+
+/* DARK-LIGHT TOGGLE SWITCH*/
+
+.DarkModeToggle {
+  color: grey;
+  border: 2px solid currentColor;
+  background: transparent;
+  cursor: pointer;
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+}
