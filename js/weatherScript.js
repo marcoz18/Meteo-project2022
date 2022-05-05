@@ -7,13 +7,16 @@ async function getWeather(e){
     y=document.getElementsByClassName('weather-description');
     z=document.getElementsByClassName('weather-humidity');
     k=document.getElementsByClassName('weather-wind');
+    m=document.getElementsByClassName('icon');
     for(var i = 0; i < x.length; i++){
         x[i].innerText=Math.round(jsonObj.main.temp) + "°";
         y[i].innerText=jsonObj.weather[0].description.charAt(0).toUpperCase()+jsonObj.weather[0].description.slice(1);
         z[i].innerText="Umidità "+jsonObj.main.humidity+"%";
         k[i].innerText="Vento "+jsonObj.wind.speed+" km/h";
+        m[i].src="https://openweathermap.org/img/wn/"+jsonObj.weather[0].icon+"@2x.png";
     }
 }
+
 getWeather(document.querySelector('.active').getAttribute('data-bs-target'));
 var myCarousel = document.getElementById('myCarousel')
 myCarousel.addEventListener('slid.bs.carousel', function (e) {
